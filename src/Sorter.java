@@ -1,11 +1,26 @@
+import java.util.ArrayList;
+
 public class Sorter {
     public static void main(String[] args) {
 
-        System.out.printf("Hello and welcome!");
+        int[] array = {51, 24, 6, 21, 98, 45, 3, 44, 71, 20, 54, 60};
 
-        for (int i = 1; i <= 5; i++) {
+    }
 
-            System.out.println("i = " + i);
+    public static void selectionSort(int arr[])
+    {
+        int n = arr.length;
+
+        for (int i = 0; i < n-1; i++)
+        {
+            int min_idx = i;
+            for (int j = i+1; j < n; j++)
+                if (arr[j] < arr[min_idx])
+                    min_idx = j;
+
+            int temp = arr[min_idx];
+            arr[min_idx] = arr[i];
+            arr[i] = temp;
         }
 
 
