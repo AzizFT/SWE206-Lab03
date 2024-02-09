@@ -7,7 +7,7 @@ public class Sorter {
 
     }
 
-    public static void selectionSort(int arr[])
+    public static void selectionSort(int[] arr)
     {
         int n = arr.length;
 
@@ -22,11 +22,8 @@ public class Sorter {
             arr[min_idx] = arr[i];
             arr[i] = temp;
         }
-
-
-
     }
-   public void insertionSort(int arr[])
+   public static void insertionSort(int[] arr)
     {
         int n = arr.length;
         for (int i = 1; i < n; ++i) {
@@ -39,4 +36,7 @@ public class Sorter {
             arr[j + 1] = key;
         }
     }
+    public static void Sort(int[] arr) {insertionSort(arr);}
+
+
 }
